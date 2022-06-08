@@ -20,7 +20,7 @@ public class Collection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             doorComponent.collectedAmount++;
             Destroy(gameObject);
