@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: be5791fcd3ba5cd47b02449937970921
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
+  _instancesCopy:
+  - {fileID: 11400000, guid: aa170f5b750dcbf46b14c0f655b0846d, type: 2}
+  _assetPath: Assets/Adobe Materials/Bloody_Wood.sbsar
