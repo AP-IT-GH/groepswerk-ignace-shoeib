@@ -19,6 +19,7 @@ public class MonsterAgent : Agent
     private float distance;
     public bool randomSpawn;
     public bool wallEndsEpisode;
+    public bool wallDecreasesReward;
     public void Start()
     {
         monsterStartPos = transform.position;
@@ -41,7 +42,7 @@ public class MonsterAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(transform.localRotation);
+        //sensor.AddObservation(transform.localRotation);
         sensor.AddObservation(target.transform.localPosition);
         sensor.AddObservation(distance);
     }
@@ -59,7 +60,10 @@ public class MonsterAgent : Agent
             SetReward(-1f);
             EndEpisode();
         }
-        AddReward(1 / distance/MaxStep);
+        if (StepCount == MaxStep - 1)
+        {
+            SetReward(5 / distance);
+        }
         var rotate = actionBuffers.ContinuousActions[1];
         var move = actionBuffers.ContinuousActions[0];
         if (move != 0 & !_animator.GetCurrentAnimatorStateInfo(0).IsName($"Armature|{walkAnimation}"))
@@ -91,6 +95,10 @@ public class MonsterAgent : Agent
         {
             SetReward((1 / distance)- 1f);
             EndEpisode();
+        }
+        if (collision.gameObject.CompareTag("Wall") && wallDecreasesReward)
+        {
+            AddReward(-.1f);
         }
     }
 
