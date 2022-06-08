@@ -4462,7 +4462,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 2000
+  MaxStep: 0
   monsterStartPos: {x: 0, y: 0, z: 0}
   MoveSpeed: 6
   RotateSpeed: 75

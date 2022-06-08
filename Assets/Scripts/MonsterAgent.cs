@@ -2,6 +2,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterAgent : Agent
 {
@@ -31,19 +32,19 @@ public class MonsterAgent : Agent
         transform.eulerAngles = new Vector3(0, 180, 0);
         if (!randomSpawn)
         {
-            spawnLocation = spawnLocations[Random.Range(0, spawnLocations.Length)];
-            target.transform.localPosition = spawnLocation;
+        //    spawnLocation = spawnLocations[Random.Range(0, spawnLocations.Length)];
+        //    target.transform.localPosition = spawnLocation;
         }
         else
         {
-            target.transform.localPosition = new Vector3(Random.Range(-28f, 40), 5, Random.Range(-7f, 64));
+        //    target.transform.localPosition = new Vector3(Random.Range(-28f, 40), 5, Random.Range(-7f, 64));
         }
     }
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(transform.position);
         //sensor.AddObservation(transform.localRotation);
-        sensor.AddObservation(target.transform.localPosition);
+        sensor.AddObservation(target.transform.position);
         sensor.AddObservation(distance);
     }
 
@@ -57,8 +58,7 @@ public class MonsterAgent : Agent
         }
         else if (distance > 100f)
         {
-            SetReward(-1f);
-            EndEpisode();
+            SceneManager.LoadScene(2);
         }
         if (StepCount == MaxStep - 1)
         {
