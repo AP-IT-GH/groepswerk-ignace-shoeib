@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR;
-//using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ContinuousMovement : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class ContinuousMovement : MonoBehaviour
     private CharacterController character;
 
     [SerializeField]
-    private float speed = 1f;
+    private float speed = 1;
 
     void Start()
     {
