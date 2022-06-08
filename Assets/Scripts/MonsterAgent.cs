@@ -53,11 +53,6 @@ public class MonsterAgent : Agent
         distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance < 5f)
         {
-            SetReward(1f);
-            EndEpisode();
-        }
-        else if (distance > 100f)
-        {
             SceneManager.LoadScene(2);
         }
         if (StepCount == MaxStep - 1)
