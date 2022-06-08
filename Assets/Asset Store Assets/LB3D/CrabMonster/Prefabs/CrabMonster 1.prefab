@@ -4462,7 +4462,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 500
+  MaxStep: 2000
   monsterStartPos: {x: 0, y: 0, z: 0}
   MoveSpeed: 6
   RotateSpeed: 75
@@ -4470,11 +4470,12 @@ MonoBehaviour:
   target: {fileID: 0}
   walkAnimation: Walk_Cycle_2
   spawnLocations:
-  - {x: -4.41, y: 5, z: 7.23}
   - {x: -18.27, y: 5, z: 26.11}
+  - {x: -4.41, y: 5, z: 7.23}
   - {x: 11.66, y: 5, z: 25}
-  randomSpawn: 0
+  randomSpawn: 1
   wallEndsEpisode: 0
+  wallDecreasesReward: 0
 --- !u!114 &7218276984704891350
 MonoBehaviour:
   m_ObjectHideFlags: 0

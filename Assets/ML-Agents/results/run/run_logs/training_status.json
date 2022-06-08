@@ -1,0 +1,65 @@
+{
+    "CrabMonster": {
+        "checkpoints": [
+            {
+                "steps": 999983,
+                "file_path": "results\\bruh3\\CrabMonster\\CrabMonster-999983.onnx",
+                "reward": 0.5721450820565224,
+                "creation_time": 1654723069.8602788,
+                "auxillary_file_paths": [
+                    "results\\bruh3\\CrabMonster\\CrabMonster-999983.pt"
+                ]
+            },
+            {
+                "steps": 1043766,
+                "file_path": "results\\bruh3\\CrabMonster\\CrabMonster-1043766.onnx",
+                "reward": null,
+                "creation_time": 1654723197.599805,
+                "auxillary_file_paths": [
+                    "results\\bruh3\\CrabMonster\\CrabMonster-1043766.pt"
+                ]
+            },
+            {
+                "steps": 1077543,
+                "file_path": "results\\bruh3\\CrabMonster\\CrabMonster-1077543.onnx",
+                "reward": null,
+                "creation_time": 1654723358.7913752,
+                "auxillary_file_paths": [
+                    "results\\bruh3\\CrabMonster\\CrabMonster-1077543.pt"
+                ]
+            },
+            {
+                "steps": 499957,
+                "file_path": "results\\bruh3\\CrabMonster\\CrabMonster-499957.onnx",
+                "reward": null,
+                "creation_time": 1654726086.8360457,
+                "auxillary_file_paths": [
+                    "results\\bruh3\\CrabMonster\\CrabMonster-499957.pt"
+                ]
+            },
+            {
+                "steps": 999949,
+                "file_path": "results\\bruh3\\CrabMonster\\CrabMonster-999949.onnx",
+                "reward": null,
+                "creation_time": 1654727263.4470453,
+                "auxillary_file_paths": [
+                    "results\\bruh3\\CrabMonster\\CrabMonster-999949.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1077543,
+            "file_path": "results\\bruh3\\CrabMonster.onnx",
+            "reward": null,
+            "creation_time": 1654723358.7913752,
+            "auxillary_file_paths": [
+                "results\\bruh3\\CrabMonster\\CrabMonster-1077543.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.11.0+cu113"
+    }
+}
