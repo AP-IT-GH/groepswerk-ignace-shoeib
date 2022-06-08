@@ -41,7 +41,7 @@ public class MonsterAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
-        //sensor.AddObservation(transform.localEulerAngles.y);
+        sensor.AddObservation(transform.localRotation);
         sensor.AddObservation(target.transform.localPosition);
         sensor.AddObservation(distance);
     }
@@ -59,10 +59,7 @@ public class MonsterAgent : Agent
             SetReward(-1f);
             EndEpisode();
         }
-        if (StepCount == MaxStep-1)
-        {
-            SetReward(1 / distance);
-        }
+        AddReward(1 / distance/MaxStep);
         var rotate = actionBuffers.ContinuousActions[1];
         var move = actionBuffers.ContinuousActions[0];
         if (move != 0 & !_animator.GetCurrentAnimatorStateInfo(0).IsName($"Armature|{walkAnimation}"))
